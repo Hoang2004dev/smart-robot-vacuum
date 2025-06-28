@@ -1,97 +1,72 @@
-﻿using TMPro;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.InputSystem;
+using TMPro;
 using UnityEngine.UI;
 
 [RequireComponent(typeof(Rigidbody2D), typeof(Collider2D))]
 public class RobotVacuumController : MonoBehaviour
 {
     [Header("Movement Settings")]
-    public float moveSpeed = 2f;
-    public float rotationSpeed = 300f; 
+    public float moveSpeed = 5f;
 
-    [Header("Collision Settings")]
-    private float backOffForce = 3f;
-
-    private Vector2 moveDirection;
-    private Rigidbody2D rb;
-
-    private bool isTurning = false;
-    private Quaternion targetRotation;
-
-    public Slider speedSlider; 
+    [Header("UI (Optional)")]
+    public Slider speedSlider;
     public TextMeshProUGUI speedText;
-    void Start()
-    {
-        rb = GetComponent<Rigidbody2D>();
-        rb.bodyType = RigidbodyType2D.Dynamic;
-        rb.gravityScale = 0f;
-        rb.freezeRotation = true;
-        rb.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
 
-        ChooseRandomDirection();
+    private Rigidbody2D rb;
+    private Vector2 inputDirection;
+
+    private PlayerInputActions inputActions;
+
+    private void Awake()
+    {
+        inputActions = new PlayerInputActions();
     }
 
-    void FixedUpdate()
+    private void OnEnable()
     {
+        inputActions.Enable();
+        inputActions.Player.Move.performed += OnMove;
+        inputActions.Player.Move.canceled += ctx => inputDirection = Vector2.zero;
+    }
+
+    private void OnDisable()
+    {
+        inputActions.Player.Move.performed -= OnMove;
+        inputActions.Player.Move.canceled -= ctx => inputDirection = Vector2.zero;
+        inputActions.Disable();
+    }
+
+    private void Start()
+    {
+        rb = GetComponent<Rigidbody2D>();
+        rb.gravityScale = 0;
+        rb.freezeRotation = true;
+        rb.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
+    }
+
+    private void FixedUpdate()
+    {
+        // Điều chỉnh tốc độ từ slider
         if (speedSlider != null)
         {
             moveSpeed = speedSlider.value;
-            speedText.text = "Speed: " + moveSpeed.ToString("0.0");
+            if (speedText != null)
+                speedText.text = "Speed: " + moveSpeed.ToString("0.0");
         }
 
-        if (speedSlider != null)
-        {
-            moveSpeed = speedSlider.value; 
-        }
+        rb.linearVelocity = inputDirection * moveSpeed;
 
-        if (isTurning)
+        // Xoay hướng robot theo vector di chuyển
+        if (inputDirection.sqrMagnitude > 0.01f)
         {
-            rb.linearVelocity = Vector2.zero;
-            transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, rotationSpeed * Time.fixedDeltaTime);
-
-            if (Quaternion.Angle(transform.rotation, targetRotation) < 1f)
-            {
-                isTurning = false;
-            }
-        }
-        else
-        {
-            rb.linearVelocity = moveDirection * moveSpeed;
-
-            if (moveDirection.sqrMagnitude > 0.01f)
-            {
-                float angle = Mathf.Atan2(moveDirection.y, moveDirection.x) * Mathf.Rad2Deg - 90f;
-                Quaternion desiredRotation = Quaternion.Euler(0, 0, angle);
-                transform.rotation = Quaternion.RotateTowards(transform.rotation, desiredRotation, rotationSpeed * Time.fixedDeltaTime);
-            }
+            float angle = Mathf.Atan2(inputDirection.y, inputDirection.x) * Mathf.Rad2Deg - 90f;
+            rb.rotation = angle;
         }
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
+    private void OnMove(InputAction.CallbackContext context)
     {
-        Debug.Log("Va chạm với: " + collision.gameObject.name);
-
-        if (collision.contacts.Length > 0)
-        {
-            Vector2 contactNormal = collision.contacts[0].normal;
-
-            rb.AddForce(contactNormal * backOffForce, ForceMode2D.Impulse);
-
-            Vector2 reflectedDir = Vector2.Reflect(moveDirection, contactNormal).normalized;
-
-            moveDirection = reflectedDir;
-
-            float targetAngle = Mathf.Atan2(reflectedDir.y, reflectedDir.x) * Mathf.Rad2Deg - 90f;
-            targetRotation = Quaternion.Euler(0, 0, targetAngle);
-
-            isTurning = true;
-        }
-    }
-
-    public void ChooseRandomDirection()
-    {
-        float angle = Random.Range(0f, 360f);
-        float rad = angle * Mathf.Deg2Rad;
-        moveDirection = new Vector2(Mathf.Cos(rad), Mathf.Sin(rad)).normalized;
+        inputDirection = context.ReadValue<Vector2>().normalized;
     }
 }

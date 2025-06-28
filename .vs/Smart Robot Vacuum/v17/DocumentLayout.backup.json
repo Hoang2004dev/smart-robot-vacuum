@@ -3,8 +3,28 @@
   "WorkspaceRootPath": "D:\\PRU212\\Smart Robot Vacuum\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{30405866-249B-D6B4-F726-7B05F715E6CA}|Assembly-CSharp.csproj|d:\\pru212\\smart robot vacuum\\assets\\scripts\\robotvacuumcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{30405866-249B-D6B4-F726-7B05F715E6CA}|Assembly-CSharp.csproj|d:\\pru212\\smart robot vacuum\\assets\\scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{30405866-249B-D6B4-F726-7B05F715E6CA}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30405866-249B-D6B4-F726-7B05F715E6CA}|Assembly-CSharp.csproj|D:\\PRU212\\Smart Robot Vacuum\\assets\\scripts\\robotvacuumcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{30405866-249B-D6B4-F726-7B05F715E6CA}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\robotvacuumcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30405866-249B-D6B4-F726-7B05F715E6CA}|Assembly-CSharp.csproj|d:\\pru212\\smart robot vacuum\\assets\\playerinputactions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{30405866-249B-D6B4-F726-7B05F715E6CA}|Assembly-CSharp.csproj|solutionrelative:assets\\playerinputactions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30405866-249B-D6B4-F726-7B05F715E6CA}|Assembly-CSharp.csproj|D:\\PRU212\\Smart Robot Vacuum\\assets\\sprites\\camerazoomui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{30405866-249B-D6B4-F726-7B05F715E6CA}|Assembly-CSharp.csproj|solutionrelative:assets\\sprites\\camerazoomui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30405866-249B-D6B4-F726-7B05F715E6CA}|Assembly-CSharp.csproj|D:\\PRU212\\Smart Robot Vacuum\\assets\\sprites\\dust\\dustspawner2d.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{30405866-249B-D6B4-F726-7B05F715E6CA}|Assembly-CSharp.csproj|solutionrelative:assets\\sprites\\dust\\dustspawner2d.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30405866-249B-D6B4-F726-7B05F715E6CA}|Assembly-CSharp.csproj|d:\\pru212\\smart robot vacuum\\assets\\scripts\\dustcollectible.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{30405866-249B-D6B4-F726-7B05F715E6CA}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\dustcollectible.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\PRU212\\Smart Robot Vacuum\\Library\\PackageCache\\com.unity.2d.tilemap@5d642f5bb7de\\Editor\\GridBrush.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -66,7 +86,89 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PlayerInputActions.cs",
+              "DocumentMoniker": "D:\\PRU212\\Smart Robot Vacuum\\Assets\\PlayerInputActions.cs",
+              "RelativeDocumentMoniker": "Assets\\PlayerInputActions.cs",
+              "ToolTip": "D:\\PRU212\\Smart Robot Vacuum\\Assets\\PlayerInputActions.cs",
+              "RelativeToolTip": "Assets\\PlayerInputActions.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-21T11:06:00.87Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "GameManager.cs",
+              "DocumentMoniker": "D:\\PRU212\\Smart Robot Vacuum\\Assets\\Scripts\\GameManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\GameManager.cs",
+              "ToolTip": "D:\\PRU212\\Smart Robot Vacuum\\Assets\\Scripts\\GameManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\GameManager.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAYwCIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-21T10:25:26.731Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "DustCollectible.cs",
+              "DocumentMoniker": "D:\\PRU212\\Smart Robot Vacuum\\Assets\\Scripts\\DustCollectible.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\DustCollectible.cs",
+              "ToolTip": "D:\\PRU212\\Smart Robot Vacuum\\Assets\\Scripts\\DustCollectible.cs",
+              "RelativeToolTip": "Assets\\Scripts\\DustCollectible.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-21T10:24:04.514Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DustSpawner2D.cs",
+              "DocumentMoniker": "D:\\PRU212\\Smart Robot Vacuum\\Assets\\Sprites\\Dust\\DustSpawner2D.cs",
+              "RelativeDocumentMoniker": "Assets\\Sprites\\Dust\\DustSpawner2D.cs",
+              "ToolTip": "D:\\PRU212\\Smart Robot Vacuum\\Assets\\Sprites\\Dust\\DustSpawner2D.cs",
+              "RelativeToolTip": "Assets\\Sprites\\Dust\\DustSpawner2D.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADMAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-21T03:23:29.582Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CameraZoomUI.cs",
+              "DocumentMoniker": "D:\\PRU212\\Smart Robot Vacuum\\Assets\\Sprites\\CameraZoomUI.cs",
+              "RelativeDocumentMoniker": "Assets\\Sprites\\CameraZoomUI.cs",
+              "ToolTip": "D:\\PRU212\\Smart Robot Vacuum\\Assets\\Sprites\\CameraZoomUI.cs",
+              "RelativeToolTip": "Assets\\Sprites\\CameraZoomUI.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAcwBYAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-21T03:40:16.862Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "RobotVacuumController.cs",
+              "DocumentMoniker": "D:\\PRU212\\Smart Robot Vacuum\\Assets\\Scripts\\RobotVacuumController.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\RobotVacuumController.cs",
+              "ToolTip": "D:\\PRU212\\Smart Robot Vacuum\\Assets\\Scripts\\RobotVacuumController.cs",
+              "RelativeToolTip": "Assets\\Scripts\\RobotVacuumController.cs",
+              "ViewState": "AgIAADkAAAAAAAAAAAAowB8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-04T12:50:00.065Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "GridBrush.cs",
               "DocumentMoniker": "D:\\PRU212\\Smart Robot Vacuum\\Library\\PackageCache\\com.unity.2d.tilemap@5d642f5bb7de\\Editor\\GridBrush.cs",
               "RelativeDocumentMoniker": "Library\\PackageCache\\com.unity.2d.tilemap@5d642f5bb7de\\Editor\\GridBrush.cs",
@@ -78,29 +180,12 @@
               "EditorCaption": ""
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "RobotVacuumController.cs",
-              "DocumentMoniker": "D:\\PRU212\\Smart Robot Vacuum\\Assets\\Scripts\\RobotVacuumController.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\RobotVacuumController.cs",
-              "ToolTip": "D:\\PRU212\\Smart Robot Vacuum\\Assets\\Scripts\\RobotVacuumController.cs",
-              "RelativeToolTip": "Assets\\Scripts\\RobotVacuumController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-04T12:50:00.065Z",
-              "EditorCaption": ""
-            },
-            {
               "$type": "Bookmark",
               "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 7,
               "Title": "read me.txt",
               "DocumentMoniker": "D:\\PRU212\\Smart Robot Vacuum\\Assets\\Sprites\\Interior free\\interior free\\read me.txt",
               "RelativeDocumentMoniker": "Assets\\Sprites\\Interior free\\interior free\\read me.txt",
